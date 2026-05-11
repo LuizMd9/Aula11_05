@@ -1,13 +1,12 @@
-while True:
-    temperatura = float(input("Digite a temperatura do servidor: "))
+limite_seguranca = 80
+sistema_ativo = True
 
-    if temperatura > 80:
-        print("ALERTA: Resfriamento ativado")
+temperatura = float(input("Informe a temperatura do servidor: "))
+
+while sistema_ativo:
+    if temperatura > limite_seguranca:
+        print(f"PERIGO! Temperatura em {temperatura}°C. Ativando coolers...")
+        temperatura -= 10 # Simulando resfriamento
     else:
-        print("Temperatura normal")
-
-    comando = input("Deseja desligar o sistema? (sim/nao): ")
-
-    if comando.lower() == "sim":
-        print("Sistema desligado.")
-        break
+        print(f"Temperatura estável: {temperatura}°C.")
+        sistema_ativo = False # Encerra simulação
