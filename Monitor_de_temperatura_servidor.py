@@ -9,4 +9,4 @@ while sistema_ativo:
         temperatura -= 10 # Simulando resfriamento
     else:
         print(f"Temperatura estável: {temperatura}°C.")
-        sistema_ativo = False # Encerra simulação
+        sistema_ativo = False # Encerra simulação 
